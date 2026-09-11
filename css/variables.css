@@ -3,10 +3,8 @@
     --texto-principal: #f8fafc;
     --texto-secundario: #94a3b8;
     
-    /* Suas cores maximalistas */
-    --cor-rosa: #ff2e93;
-    --cor-amarelo: #fbbf24;
-    --cor-roxo: #a855f7;
-    --cor-azul: #3b82f6;
-    --cor-verde: #10b981;
+
+    --cor-verde: #00d285;   /* X-Frágil */
+    --cor-amarelo: #e2f13c; /* Endfield */
+    --cor-ciano: #00e5ff;    /* Damas */
 }

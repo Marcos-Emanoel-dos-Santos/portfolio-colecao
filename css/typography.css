@@ -1,6 +1,12 @@
 h1, h2 {
     font-size: 2.5rem;
+}
+
+h1 {
     margin-bottom: 1rem;
+}
+h2 {
+    margin-bottom: 0.3rem;
 }
 
 .tecnologias, .subtitulo-destaque {
@@ -11,16 +17,24 @@ h1, h2 {
     margin-bottom: 1rem;
 }
 
-.descricao {
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
-    max-width: 800px;
+.tecnologias {
+    margin-bottom: 2.5rem;
 }
 
+.descricao {
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+    max-width: 900px;
+}
+
+
 .btn-link {
+    width: fit-content;
+    align-self: flex-start;
     color: var(--texto-principal);
     text-decoration: none;
     border-bottom: 1px solid var(--texto-principal);
     padding-bottom: 2px;
     transition: 0.3s;
 }
+
