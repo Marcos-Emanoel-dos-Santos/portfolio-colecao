@@ -1,0 +1,95 @@
+:root {
+    --fundo-escuro: #09090b;
+    --texto-principal: #f8fafc;
+    --texto-secundario: #94a3b8;
+    
+    /* Suas cores maximalistas */
+    --cor-rosa: #ff2e93;
+    --cor-amarelo: #fbbf24;
+    --cor-roxo: #a855f7;
+    --cor-azul: #3b82f6;
+    --cor-verde: #10b981;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--fundo-escuro);
+    color: var(--texto-principal);
+    font-family: 'Inter', system-ui, sans-serif;
+}
+
+
+.container-scroll {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+.sessao-tela {
+    min-height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10%;
+    transition: all 0.4s ease-in-out;
+}
+
+
+h1, h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.tecnologias, .subtitulo-destaque {
+    color: var(--texto-secundario);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 1rem;
+}
+
+.descricao {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    max-width: 800px;
+}
+
+.btn-link {
+    color: var(--texto-principal);
+    text-decoration: none;
+    border-bottom: 1px solid var(--texto-principal);
+    padding-bottom: 2px;
+    transition: 0.3s;
+}
+
+
+.bloco-texto {
+    padding: 2rem;
+    border-left: 4px solid transparent;
+    transition: all 0.4s ease;
+}
+
+/* Rosa - X-Frágil */
+.card-hover-rosa:hover .bloco-texto {
+    border-left: 4px solid var(--cor-rosa);
+    background: linear-gradient(90deg, rgba(255, 46, 147, 0.08) 0%, transparent 40%);
+}
+
+/* Amarelo - Otimizador */
+.card-hover-amarelo:hover .bloco-texto {
+    border-left: 4px solid var(--cor-amarelo);
+    background: linear-gradient(90deg, rgba(251, 191, 36, 0.08) 0%, transparent 40%);
+}
+
+/* Roxo - Damas */
+.card-hover-roxo:hover .bloco-texto {
+    border-left: 4px solid var(--cor-roxo);
+    background: linear-gradient(90deg, rgba(168, 85, 247, 0.08) 0%, transparent 40%);
+}

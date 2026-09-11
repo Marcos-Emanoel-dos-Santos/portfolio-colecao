@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio | Ciência da Computação</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <nav id="navegacao">
+            <a href="#sobre">Início</a>
+            <a href="#destaques">Destaques</a>
+            <a href="#laboratorio">Formação & Lab</a>
+            <a href="#criacoes">Criações</a>
+        </nav>
+    </header>
+
+    <main class="container-scroll">
+        
+        <section id="sobre" class="sessao-tela">
+            <div class="conteudo-central">
+                <h1>Lógica, Código e Cores.</h1>
+                <p>Estudante de Ciência da Computação apaixonado por criar, mas muito mais que isso, um menino que ama jogos eletrônicos e LEDs coloridos!</p>
+            </div>
+        </section>
+
+
+        <section id="destaques">
+            <article class="sessao-tela card-hover-rosa">
+                <div class="bloco-texto">
+                    <h2>Checklist Síndrome do X-Frágil</h2>
+                    <p class="tecnologias">Saúde e Acessibilidade | React Native e Supabase</p>
+                    <h3 class="subtitulo-destaque">Descrição</h3>
+                    <p class="descricao">Checklist clínico para diagnóstico precoce da Síndrome do X-Frágil, a maior causa hereditária de autismo. O projeto foi desenvolvido durante todo o perdíodo do primeiro semestre de 2026, tendo sido um projeto acadêmico.</p>
+                    <h3 class="subtitulo-destaque">Colaboração e desafios</h3>
+                    <p class="descricao">Atuei na integração do banco de dados utilizando Supabase e colaborei na estruturação do back-end do projeto. O maior desafio que enfrentei foi na colaboração entre o que era feito no back-end com o que era feito no front-end, o que me serviu de grande aprendizado sobre a postura a ser adotada ao desenvolver projetos de médio porte em equipes.</p>
+                    <a href="#" class="btn-link">Ver Repositório</a>
+                </div>
+            </article>
+
+            <article class="sessao-tela card-hover-amarelo">
+                <div class="bloco-texto">
+                    <h2>Otimizador Arknights Endfield</h2>
+                    <p class="tecnologias">Lógica e eficiência | TypeScript</p>
+                    <p class="descricao">Uma ferramenta criada para resolver gargalos de produção de recursos dentro do jogo, otimizando o tempo de fábricas virtuais com lógica matemática. O projeto foi desenvolvido apenas por mim e não encontra-se totalmente finalizado.</p>
+                    <p class="descricao">Eu não sabia absolutamente nada de TypeScript, queria muito descobrir como calcular a forma mais otimizada de fazer a fabricação disponível do jogo e uni o útil ao agradável: supri minha necessidade de otimizar enquanto aprendia uma nova linguagem.</p>
+                    <a href="#" class="btn-link">Ver Repositório</a>
+                </div>
+            </article>
+
+            <article class="sessao-tela card-hover-roxo">
+                <div class="bloco-texto">
+                    <h2>Jogo de Damas</h2>
+                    <p class="tecnologias">Colaboração | Java</p>
+                    <p class="descricao">Projeto acadêmico focado na aplicação de lógica orientada a objetos na construção do clássico jogo de tabuleiro. O projeto foi desenvolvido em equipe com os estudantes Alisson, Bruna, Pedro e Rafael.</p>
+                    <p class="descricao">O maior desafio enfrentado decorreu de um contratempo: eu havia uma quantidade absurda de entregas a fazer e o prazo estava chegando. No desenvolvimento deste projeto a divisão de tarefas para cada membro brilhou para que conseguíssemos entregar dentro do prazo (e um trabalho incrível, diga-se de passagem).</p>
+                    <a href="#" class="btn-link">Ver Repositório</a>
+                </div>
+            </article>
+        </section>
+
+
+        <section id="laboratorio" class="sessao-tela card-hover-azul">
+            <h2>Formação Acadêmica & Laboratório</h2>
+            <div class="carrossel">
+                <div class="item" onclick="abrirModal('deans-list')">Dean's List</div>
+                <div class="item" onclick="abrirModal('led')">A Saga dos LEDs (C++)</div>
+                <div class="item" onclick="abrirModal('maratona')">Maratona SBC</div>
+                <div class="item" onclick="abrirModal('obmep')">OBMEP e Robótica</div>
+            </div>
+        </section>
+
+
+        <span class="linha-divisoria"></span>
+        <section id="criacoes" class="sessao-tela card-hover-verde">
+            <h2>Coleção de Criações</h2>
+            <div class="carrossel">
+                <div class="item" onclick="abrirModal('construct')">Primeira Experiência no Construct</div>
+                <div class="item" onclick="abrirModal('estudante-solidario')">Estudante Solidário</div>
+                <div class="item" onclick="abrirModal('naves')">Guerra de Naves</div>
+                <div class="item" onclick="abrirModal('ca')">Centro Acadêmico (Estatuto)</div>
+                <div class="item" onclick="abrirModal('acolhida')">Organização: Acolhida de Calouros</div>
+            </div>
+        </section>
+
+    </main>
+</body>
+</html>
