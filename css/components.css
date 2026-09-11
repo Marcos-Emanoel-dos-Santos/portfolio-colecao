@@ -1,5 +1,20 @@
-@import './variables.css';
-@import './base.css';
-@import './typography.css';
-@import './layout.css';
-@import './components.css';
+.bloco-texto {
+    padding: 2rem;
+    border-left: 4px solid transparent;
+    transition: all 0.4s ease;
+}
+
+.card-hover-rosa:hover .bloco-texto {
+    border-left: 4px solid var(--cor-rosa);
+    background: linear-gradient(90deg, rgba(255, 46, 147, 0.08) 0%, transparent 40%);
+}
+
+.card-hover-amarelo:hover .bloco-texto {
+    border-left: 4px solid var(--cor-amarelo);
+    background: linear-gradient(90deg, rgba(251, 191, 36, 0.08) 0%, transparent 40%);
+}
+
+.card-hover-roxo:hover .bloco-texto {
+    border-left: 4px solid var(--cor-roxo);
+    background: linear-gradient(90deg, rgba(168, 85, 247, 0.08) 0%, transparent 40%);
+}
