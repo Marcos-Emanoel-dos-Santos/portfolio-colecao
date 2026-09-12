@@ -186,7 +186,7 @@
 /* Telas pequenas */
 @media (max-width: 768px) {
     .bloco-texto {
-        padding: 0 5%; 
+        padding: 120px 5% 0; 
     }
 
     .item {
