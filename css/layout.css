@@ -213,10 +213,10 @@ nav a:hover {
 
 
 #contato {
-    position: relative; /* Necessário para prender os créditos no fundo */
+    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centraliza o texto e os botões */
+    justify-content: center;
     align-items: center;
     text-align: center;
 }
@@ -231,15 +231,13 @@ nav a:hover {
     margin-bottom: 2rem;
 }
 
-/* Os botões vão herdar as cores que já criamos antes! */
 
-/* Créditos presos no rodapé da seção */
 .rodape-creditos {
     position: absolute;
-    bottom: 2rem; /* Distância do fundo da tela */
+    bottom: 2rem;
     width: 100%;
     text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.05); /* Linha sutil separando */
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
     padding-top: 1.5rem;
 }
 

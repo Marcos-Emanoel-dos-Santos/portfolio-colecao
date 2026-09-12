@@ -85,7 +85,6 @@ function isOffscreen(b) {
 
 // A função que roda a cada frame
 function animate() {
-    // Limpa a tela transparente
     ctx.clearRect(0, 0, width, height);
 
     for (let i = balls.length - 1; i >= 0; i--) {
