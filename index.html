@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio | Ciência da Computação</title>
+    <title>Portfólio | Coleção</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -15,6 +15,7 @@
             <a href="#destaques">Destaques</a>
             <a href="#laboratorio">Formação & Lab</a>
             <a href="#criacoes">Criações</a>
+            <a href="#contato">Contato</a>
         </nav>
     </header>
 
@@ -28,6 +29,13 @@
 
                 <h1>Lógica, Código e Cores.</h1>
                 <p>Estudante de Ciência da Computação apaixonado por criar, mas muito mais que isso, um menino que ama jogos eletrônicos e LEDs coloridos!</p>
+                
+                <div class="botoes-contato">
+                    <a href="https://www.linkedin.com/in/marcos-emanoel-dos-santos/" target="_blank" rel="noopener noreferrer" class="btn-contato linkedin">LinkedIn</a>
+                    <a href="http://lattes.cnpq.br/9134515666263403" target="_blank" rel="noopener noreferrer" class="btn-contato lattes">Currículo Lattes</a>
+                    <a href="mailto:marcosssantos1997@gmail.com" class="btn-contato email">E-mail</a>
+                </div>
+                
             </div>
         </section>
 
@@ -41,7 +49,7 @@
                     <p class="descricao">Checklist clínico para diagnóstico precoce da Síndrome do X-Frágil, a maior causa hereditária de autismo. O projeto foi desenvolvido durante todo o perdíodo do primeiro semestre de 2026, tendo sido um projeto acadêmico.</p>
                     <h3 class="subtitulo-destaque">Colaboração e desafios</h3>
                     <p class="descricao">Atuei na integração do banco de dados utilizando Supabase e colaborei na estruturação do back-end do projeto. O maior desafio que enfrentei foi na colaboração entre o que era feito no back-end com o que era feito no front-end, o que me serviu de grande aprendizado sobre a postura a ser adotada ao desenvolver projetos de médio porte em equipes.</p>
-                    <a href="https://github.com/Marcos-Emanoel-dos-Santos/x-monorepo" target="_blank" class="btn-link">Ver Repositório</a>
+                    <a href="https://github.com/Marcos-Emanoel-dos-Santos/x-monorepo" target="_blank" rel="noopener noreferrer" class="btn-link">Ver Repositório</a>
                 </div>
             </article>
 
@@ -51,17 +59,17 @@
                     <p class="tecnologias">Lógica e eficiência | TypeScript</p>
                     <p class="descricao">Uma ferramenta criada para resolver gargalos de produção de recursos dentro do jogo, otimizando o tempo de fábricas virtuais com lógica matemática. O projeto foi desenvolvido apenas por mim e não encontra-se totalmente finalizado.</p>
                     <p class="descricao">Eu não sabia absolutamente nada de TypeScript, queria muito descobrir como calcular a forma mais otimizada de fazer a fabricação disponível do jogo e uni o útil ao agradável: supri minha necessidade de otimizar enquanto aprendia uma nova linguagem.</p>
-                    <a href="https://github.com/Marcos-Emanoel-dos-Santos/endfield_otimizador_CAI" target="_blank" class="btn-link">Ver Repositório</a>
+                    <a href="https://github.com/Marcos-Emanoel-dos-Santos/endfield_otimizador_CAI" target="_blank" rel="noopener noreferrer" class="btn-link">Ver Repositório</a>
                 </div>
             </article>
 
             <article class="sessao-tela card-hover-ciano">
                 <div class="bloco-texto">
                     <h2>Jogo de Damas</h2>
-                    <p class="tecnologias">Colaboração | Java</p>
+                    <p class="tecnologias">Orientação a Objetos | Java</p>
                     <p class="descricao">Projeto acadêmico focado na aplicação de lógica orientada a objetos na construção do clássico jogo de tabuleiro. O projeto foi desenvolvido em equipe com os estudantes Alisson, Bruna, Pedro e Rafael.</p>
                     <p class="descricao">O maior desafio enfrentado decorreu de um contratempo: eu havia uma quantidade absurda de entregas a fazer e o prazo estava chegando. No desenvolvimento deste projeto a divisão de tarefas para cada membro brilhou para que conseguíssemos entregar dentro do prazo (e um trabalho incrível, diga-se de passagem).</p>
-                    <a href="https://github.com/alifoo/poo-damas" target="_blank" class="btn-link">Ver Repositório</a>
+                    <a href="https://github.com/alifoo/poo-damas" target="_blank" rel="noopener noreferrer" class="btn-link">Ver Repositório</a>
                 </div>
             </article>
         </section>
@@ -74,7 +82,7 @@
                 </div>
                 
                 <div class="item" style="--cor-item: #00d285; --img-fundo: url('../img/bg-leds.jpg');" onclick="abrirModal('led')">
-                    <h3 class="titulo-item">A Saga dos LEDs</h3>
+                    <h3 class="titulo-item">RGBlib</h3>
                 </div>
                 
                 <div class="item card-ativo" style="--cor-item: #fbbf24; --img-fundo: url(../img/bg-portfolio.jpg);" onclick="abrirModal('portfolio')">
@@ -122,9 +130,39 @@
             </div>
         </section>
 
-        <script src="./js/observarSecaoAtiva.js"></script>
-        <script src="./js/estrelas.js"></script>
-        <script src="./js/giraCarrossel.js"></script>
+        <div id="modal-overlay" class="escondido">
+            <div class="modal-caixa">
+                <button id="btn-fechar-modal" onclick="fecharModal()">×</button>
+                <div id="modal-conteudo">
+                </div>
+            </div>
+        </div>
+
+
+        <footer id="contato" class="sessao-tela">
+            <div class="conteudo-central">
+                <h2>Vamos criar algo juntos?</h2>
+                <p>Estou sempre aberto a novos desafios, ideias e oportunidades de aprendizado.</p>
+                
+                <div class="botoes-contato">
+                    <a href="https://linkedin.com/in/seu-linkedin" target="_blank" rel="noopener noreferrer" class="btn-contato linkedin">LinkedIn</a>
+                    <a href="http://lattes.cnpq.br/seu-lattes" target="_blank" rel="noopener noreferrer" class="btn-contato lattes">Currículo Lattes</a>
+                    <a href="mailto:seu-email@gmail.com" class="btn-contato email">E-mail</a>
+                </div>
+            </div>
+
+            <div class="rodape-creditos">
+                <p>Desenvolvido com Lógica, Código e Cores por <span class="destaque-nome">Marcos Emanoel dos Santos</span>.</p>
+                <p>© 2026 - Todos os direitos reservados.</p>
+            </div>
+        </footer>
+
     </main>
+
+
+    <script src="./js/observarSecaoAtiva.js"></script>
+    <script src="./js/estrelas.js"></script>
+    <script src="./js/giraCarrossel.js"></script>
+    <script src="./js/modal.js"></script>
 </body>
 </html>

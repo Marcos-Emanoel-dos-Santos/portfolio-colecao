@@ -38,3 +38,53 @@ h2 {
     transition: 0.3s;
 }
 
+
+.botoes-contato {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn-contato {
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    color: var(--texto-principal);
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.btn-contato.linkedin {
+    border-color: rgba(0, 229, 255, 0.4);
+}
+.btn-contato.linkedin:hover {
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.6);
+    background-color: rgba(0, 229, 255, 0.1);
+    transform: translateY(-3px);
+}
+
+.btn-contato.lattes {
+    border-color: rgba(251, 191, 36, 0.4);
+}
+.btn-contato.lattes:hover {
+    box-shadow: 0 0 20px rgba(251, 191, 36, 0.6);
+    background-color: rgba(251, 191, 36, 0.1);
+    transform: translateY(-3px);
+}
+
+.btn-contato.email {
+    border-color: rgba(0, 210, 133, 0.4);
+}
+.btn-contato.email:hover {
+    box-shadow: 0 0 20px rgba(0, 210, 133, 0.6);
+    background-color: rgba(0, 210, 133, 0.1);
+    transform: translateY(-3px);
+}

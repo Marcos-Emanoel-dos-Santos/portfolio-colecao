@@ -134,3 +134,123 @@ nav a:hover {
 .carrossel::-webkit-scrollbar {
     display: none; 
 }
+
+
+#modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(9, 9, 11, 0.85);
+    backdrop-filter: blur(8px);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+
+#modal-overlay.ativo {
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+.modal-caixa {
+    background-color: var(--fundo-escuro);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 40px rgba(0, 229, 255, 0.15);
+    border-radius: 16px;
+    width: 90%;
+    max-width: 800px;
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: 3rem;
+    position: relative;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+#modal-overlay.ativo .modal-caixa {
+    transform: translateY(0);
+}
+
+
+#btn-fechar-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: var(--texto-secundario);
+    font-size: 2rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+#btn-fechar-modal:hover {
+    color: var(--cor-rosa);
+}
+
+#modal-conteudo h2 {
+    color: var(--cor-ciano);
+    margin-bottom: 0.5rem;
+}
+
+.tags-modal {
+    color: var(--texto-secundario);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+
+
+#contato {
+    position: relative; /* Necessário para prender os créditos no fundo */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza o texto e os botões */
+    align-items: center;
+    text-align: center;
+}
+
+#contato h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#contato p {
+    color: var(--texto-secundario);
+    margin-bottom: 2rem;
+}
+
+/* Os botões vão herdar as cores que já criamos antes! */
+
+/* Créditos presos no rodapé da seção */
+.rodape-creditos {
+    position: absolute;
+    bottom: 2rem; /* Distância do fundo da tela */
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05); /* Linha sutil separando */
+    padding-top: 1.5rem;
+}
+
+.rodape-creditos p {
+    color: var(--texto-secundario);
+    font-size: 0.9rem;
+    margin: 0.3rem 0;
+}
+
+.destaque-nome {
+    color: var(--texto-principal);
+    font-weight: bold;
+    letter-spacing: 1px;
+}
