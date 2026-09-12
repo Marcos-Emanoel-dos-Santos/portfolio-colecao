@@ -254,3 +254,57 @@ nav a:hover {
     font-weight: bold;
     letter-spacing: 1px;
 }
+
+
+/* RESPONSIVIDADE */
+/* Telas pequenas */
+@media (max-width: 768px) {
+    nav {
+        gap: 1rem;
+        padding: 1rem;
+        flex-wrap: wrap;
+        font-size: 0.9rem;
+    }
+
+    .conteudo-central {
+        padding: 0 5%;
+    }
+
+    .foto-perfil-container {
+        width: 170px;
+        height: 170px;
+    }
+
+    #laboratorio h2, #criacoes h2 {
+        padding: 0 5%;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .carrossel {
+        width: 95%;
+    }
+
+    .modal-caixa {
+        width: 95%;
+        padding: 2rem 1.5rem;
+    }
+
+    #btn-fechar-modal {
+        top: 10px;
+        right: 15px;
+    }
+
+    #contato h2 {
+        font-size: 1.8rem;
+    }
+
+    #contato p {
+        padding: 0 5%;
+    }
+
+    .rodape-creditos {
+        bottom: 1rem;
+        padding-top: 1rem;
+    }
+}

@@ -7,32 +7,34 @@ carrosseis.forEach(carrossel => {
         carrossel.appendChild(clone);
     });
 
-    let tamanhoDeUmCiclo = 0;
-
-    setTimeout(() => {
+    const getTamanhoCiclo = () => {
         const primeiroOriginal = carrossel.children[0];
         const primeiroClone = carrossel.children[itensOriginais.length];
-        tamanhoDeUmCiclo = primeiroClone.offsetLeft - primeiroOriginal.offsetLeft;
-    }, 100);
+        return primeiroClone.offsetLeft - primeiroOriginal.offsetLeft;
+    };
 
     carrossel.addEventListener('scroll', () => {
+        const tamanhoDeUmCiclo = getTamanhoCiclo();
         if (!tamanhoDeUmCiclo) return;
 
-        if (carrossel.scrollLeft >= tamanhoDeUmCiclo) {
+        const scrollAtual = Math.ceil(carrossel.scrollLeft);
+
+        if (scrollAtual >= tamanhoDeUmCiclo) {
             carrossel.style.scrollBehavior = 'auto';
             carrossel.scrollLeft -= tamanhoDeUmCiclo;
         } 
         else if (carrossel.scrollLeft <= 0) {
             carrossel.style.scrollBehavior = 'auto'; 
-            carrossel.scrollLeft += tamanhoDeUmCiclo - 10; 
+            carrossel.scrollLeft += tamanhoDeUmCiclo;
         }
     });
 
     let intervaloAutoScroll;
     const iniciarAutoScroll = () => {
+        clearInterval(intervaloAutoScroll); 
+        
         intervaloAutoScroll = setInterval(() => {
             const card = carrossel.querySelector('.item');
-            // Calcula o tamanho do pulo (Largura do Card + o Gap de 32px)
             const gap = parseFloat(window.getComputedStyle(carrossel).gap) || 32;
             const avancar = card.offsetWidth + gap;
 
@@ -43,14 +45,14 @@ carrosseis.forEach(carrossel => {
 
     const pararAutoScroll = () => clearInterval(intervaloAutoScroll);
 
-    // INICIA (Para quando passar o mouse/dedo)
+    // INICIA
     iniciarAutoScroll();
 
     carrossel.addEventListener('mouseenter', pararAutoScroll);
     carrossel.addEventListener('mouseleave', iniciarAutoScroll);
     
-    carrossel.addEventListener('touchstart', pararAutoScroll);
+    carrossel.addEventListener('touchstart', pararAutoScroll, { passive: true });
     carrossel.addEventListener('touchend', () => {
-        setTimeout(iniciarAutoScroll, 1000);
+        setTimeout(iniciarAutoScroll, 2500);
     });
 });

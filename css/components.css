@@ -173,3 +173,29 @@
     transform: translateY(-10px);
     box-shadow: 0 0 22px 0px var(--cor-item);
 }
+
+
+/* RESPONSIVIDADE */
+/* Telas médias */
+@media (max-width: 1024px) {
+    .item {
+        flex: 0 0 calc(50% - 1rem); 
+    }
+}
+
+/* Telas pequenas */
+@media (max-width: 768px) {
+    .bloco-texto {
+        padding: 0 5%; 
+    }
+
+    .item {
+        flex: 0 0 calc(85% - 1rem); 
+        height: 400px;
+        padding: 1.5rem;
+    }
+
+    .titulo-item {
+        font-size: 1.3rem;
+    }
+}
