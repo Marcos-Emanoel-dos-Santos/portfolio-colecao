@@ -11,8 +11,8 @@ header {
 
 nav {
     display: flex;
-    justify-content: center; /* Centraliza os links */
-    gap: 2.5rem; /* Espaço entre os links */
+    justify-content: center;
+    gap: 2.5rem;
     padding: 1.5rem;
 }
 
@@ -25,6 +25,68 @@ nav a {
 
 nav a:hover {
     color: var(--texto-principal);
+}
+
+.conteudo-central {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto; 
+    z-index: 1;
+}
+
+@keyframes girarRoda {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.foto-perfil-container {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    padding: 6px;
+    box-shadow: 0 0 40px rgba(0, 229, 255, 0.4), 0 0 20px rgba(0, 210, 133, 0.4);
+    transition: transform 0.4s ease;
+    z-index: 1;
+}
+
+.foto-perfil-container::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    border-radius: 50%;
+    
+    background: conic-gradient(
+        var(--cor-roxo),
+        var(--cor-ciano),
+        var(--cor-verde),
+        var(--cor-amarelo),
+        var(--cor-rosa),
+        var(--cor-roxo)
+    );
+    
+    animation: girarRoda 4s linear infinite;
+    z-index: -1;
+}
+
+.foto-perfil-container:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 0 60px rgba(0, 229, 255, 0.6), 0 0 30px rgba(0, 210, 133, 0.6);
+}
+
+.foto-perfil {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid var(--fundo-escuro);
+    
+    position: relative; 
+    z-index: 2;
 }
 
 .container-scroll {
@@ -40,6 +102,35 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0; /* Removido o padding de 10% daqui */
+    padding: 0;
     transition: all 0.4s ease-in-out;
+}
+
+#laboratorio, #criacoes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+}
+
+#laboratorio h2, #criacoes h2 {
+    padding: 0 10%;
+    margin-bottom: 2rem;
+}
+
+
+
+.carrossel {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    gap: 2rem; 
+    padding: 2rem 0;
+    overflow-x: auto; 
+    scroll-snap-type: x mandatory; 
+    scrollbar-width: none; 
+}
+
+.carrossel::-webkit-scrollbar {
+    display: none; 
 }

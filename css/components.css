@@ -100,3 +100,76 @@
     text-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
 }
 
+
+/* LABORATÓRIO e COLEÇÃO DE CRIAÇÕES */
+.item {
+    flex: 0 0 calc(25% - 1.5rem); 
+    
+    height: 450px;
+    border-radius: 20px;
+    scroll-snap-align: start;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    
+    background-color: rgba(255, 255, 255, 0.03); 
+    border: 2px solid rgba(255, 255, 255, 0.05); 
+    background-clip: padding-box;
+    backdrop-filter: blur(10px); 
+    
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+    
+    background-image: 
+        linear-gradient(to bottom, transparent 0%, var(--fundo-escuro) 70%),
+        var(--img-fundo, none);
+    
+    background-size: 100% 100%, cover; 
+    background-position: center, center top; 
+    background-repeat: no-repeat;
+}
+
+.item:hover {
+    transform: translateY(-10px);
+    border-color: var(--cor-item);
+    box-shadow: 0 15px 40px -10px var(--cor-item);
+}
+
+.titulo-item {
+    position: relative;
+    z-index: 2;
+    font-size: 1.5rem;
+    color: var(--texto-principal);
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.9);
+}
+
+.subtitulo-card {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--texto-secundario);
+    margin-top: 0.5rem;
+    font-weight: 400;
+}
+
+@keyframes pulsoDourado {
+    0% { 
+        box-shadow: 0 0 5px -5px var(--cor-item); 
+    }
+    100% { 
+        box-shadow: 0 0 18px 5px var(--cor-item); 
+    }
+}
+
+.card-ativo {
+    border-color: var(--cor-item);
+    animation: pulsoDourado 1.5s infinite alternate ease-in-out;
+}
+
+.card-ativo:hover {
+    animation: none;
+    transform: translateY(-10px);
+    box-shadow: 0 0 22px 0px var(--cor-item);
+}

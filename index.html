@@ -22,6 +22,10 @@
         
         <section id="sobre" class="sessao-tela">
             <div class="conteudo-central">
+                <div class="foto-perfil-container">
+                    <img src="./img/profile-picture.jpg" alt="Sua foto" class="foto-perfil">
+                </div>
+
                 <h1>Lógica, Código e Cores.</h1>
                 <p>Estudante de Ciência da Computação apaixonado por criar, mas muito mais que isso, um menino que ama jogos eletrônicos e LEDs coloridos!</p>
             </div>
@@ -37,7 +41,7 @@
                     <p class="descricao">Checklist clínico para diagnóstico precoce da Síndrome do X-Frágil, a maior causa hereditária de autismo. O projeto foi desenvolvido durante todo o perdíodo do primeiro semestre de 2026, tendo sido um projeto acadêmico.</p>
                     <h3 class="subtitulo-destaque">Colaboração e desafios</h3>
                     <p class="descricao">Atuei na integração do banco de dados utilizando Supabase e colaborei na estruturação do back-end do projeto. O maior desafio que enfrentei foi na colaboração entre o que era feito no back-end com o que era feito no front-end, o que me serviu de grande aprendizado sobre a postura a ser adotada ao desenvolver projetos de médio porte em equipes.</p>
-                    <a href="#" class="btn-link">Ver Repositório</a>
+                    <a href="https://github.com/Marcos-Emanoel-dos-Santos/x-monorepo" target="_blank" class="btn-link">Ver Repositório</a>
                 </div>
             </article>
 
@@ -47,7 +51,7 @@
                     <p class="tecnologias">Lógica e eficiência | TypeScript</p>
                     <p class="descricao">Uma ferramenta criada para resolver gargalos de produção de recursos dentro do jogo, otimizando o tempo de fábricas virtuais com lógica matemática. O projeto foi desenvolvido apenas por mim e não encontra-se totalmente finalizado.</p>
                     <p class="descricao">Eu não sabia absolutamente nada de TypeScript, queria muito descobrir como calcular a forma mais otimizada de fazer a fabricação disponível do jogo e uni o útil ao agradável: supri minha necessidade de otimizar enquanto aprendia uma nova linguagem.</p>
-                    <a href="#" class="btn-link">Ver Repositório</a>
+                    <a href="https://github.com/Marcos-Emanoel-dos-Santos/endfield_otimizador_CAI" target="_blank" class="btn-link">Ver Repositório</a>
                 </div>
             </article>
 
@@ -57,20 +61,33 @@
                     <p class="tecnologias">Colaboração | Java</p>
                     <p class="descricao">Projeto acadêmico focado na aplicação de lógica orientada a objetos na construção do clássico jogo de tabuleiro. O projeto foi desenvolvido em equipe com os estudantes Alisson, Bruna, Pedro e Rafael.</p>
                     <p class="descricao">O maior desafio enfrentado decorreu de um contratempo: eu havia uma quantidade absurda de entregas a fazer e o prazo estava chegando. No desenvolvimento deste projeto a divisão de tarefas para cada membro brilhou para que conseguíssemos entregar dentro do prazo (e um trabalho incrível, diga-se de passagem).</p>
-                    <a href="#" class="btn-link">Ver Repositório</a>
+                    <a href="https://github.com/alifoo/poo-damas" target="_blank" class="btn-link">Ver Repositório</a>
                 </div>
             </article>
         </section>
 
-
-        <section id="laboratorio" class="sessao-tela card-hover-azul">
+        <section id="laboratorio" class="sessao-tela">
             <h2>Formação Acadêmica & Laboratório</h2>
             <div class="carrossel">
-                <div class="item" onclick="abrirModal('deans-list')">Dean's List</div>
-                <div class="item" onclick="abrirModal('led')">A Saga dos LEDs</div>
-                <div class="item" onclick="abrirModal('portfolio')">Portfólio | Criações (Você está aqui!)</div>
-                <div class="item" onclick="abrirModal('maratona')">Maratona SBC</div>
-                <div class="item" onclick="abrirModal('obmep')">OBMEP e Robótica</div>
+                <div class="item" style="--cor-item: #a855f7; --img-fundo: url('../img/bg-deans.jpg');" onclick="abrirModal('deans-list')">
+                    <h3 class="titulo-item">Dean's List</h3>
+                </div>
+                
+                <div class="item" style="--cor-item: #00d285; --img-fundo: url('../img/bg-leds.jpg');" onclick="abrirModal('led')">
+                    <h3 class="titulo-item">A Saga dos LEDs</h3>
+                </div>
+                
+                <div class="item card-ativo" style="--cor-item: #fbbf24; --img-fundo: url(../img/bg-portfolio.jpg);" onclick="abrirModal('portfolio')">
+                    <h3 class="titulo-item">Portfólio <span class="subtitulo-card">(Você está aqui!)</span></h3>
+                </div>
+                
+                <div class="item" style="--cor-item: #ff2e93; --img-fundo: url('../img/maratona.jpg');" onclick="abrirModal('maratona')">
+                    <h3 class="titulo-item">Maratona SBC</h3>
+                </div>
+
+                <div class="item" style="--cor-item: #e2f13c; --img-fundo: url('../img/bg-robotica.jpg');" onclick="abrirModal('robotica')">
+                    <h3 class="titulo-item">OBMEP e Robótica</h3>
+                </div>
             </div>
         </section>
 
@@ -79,17 +96,35 @@
         <section id="criacoes" class="sessao-tela card-hover-verde">
             <h2>Coleção de Criações</h2>
             <div class="carrossel">
-                <div class="item" onclick="abrirModal('construct')">Primeira Experiência no Construct</div>
-                <div class="item" onclick="abrirModal('estudante-solidario')">Estudante Solidário</div>
-                <div class="item" onclick="abrirModal('naves')">Guerra de Naves</div>
-                <div class="item" onclick="abrirModal('pong')">Pong 2</div>
-                <div class="item" onclick="abrirModal('ca')">Centro Acadêmico (Estatuto)</div>
-                <div class="item" onclick="abrirModal('acolhida')">Organização: Acolhida de Calouros</div>
+                <div class="item" style="--cor-item: #51438d; --img-fundo: url('../img/bg-construct.jpg');" onclick="abrirModal('construct')">
+                    <h3 class="titulo-item">Primeira Experiência no Construct</h3>
+                </div>
+                
+                <div class="item" style="--cor-item: #00d285; --img-fundo: url('../img/bg-estudante-solidario.jpg');" onclick="abrirModal('estudante-solidario')">
+                    <h3 class="titulo-item">Estudante Solidário</h3>
+                </div>
+                
+                <div class="item" style="--cor-item: #3c00d4; --img-fundo: url('../img/bg-naves.jpg');" onclick="abrirModal('naves')">
+                    <h3 class="titulo-item">Guerra de Naves</h3>
+                </div>
+                
+                <div class="item" style="--cor-item: #ffffff; --img-fundo: url('../img/bg-pong.jpg');" onclick="abrirModal('pong')">
+                    <h3 class="titulo-item">Pong</h3>
+                </div>
+
+                <div class="item" style="--cor-item: #d9710a; --img-fundo: url('../img/bg-ca.jpg');" onclick="abrirModal('ca')">
+                    <h3 class="titulo-item">Centro Acadêmico</h3>
+                </div>
+
+                <div class="item" style="--cor-item: #d2d90a; --img-fundo: url('../img/bg-acolhida.jpg');" onclick="abrirModal('ca')">
+                    <h3 class="titulo-item">Acolhida Cultural</h3>
+                </div>
             </div>
         </section>
 
-        <script src="observarSecaoAtiva.js"></script>
-        <script src="estrelas.js"></script>
+        <script src="./js/observarSecaoAtiva.js"></script>
+        <script src="./js/estrelas.js"></script>
+        <script src="./js/giraCarrossel.js"></script>
     </main>
 </body>
 </html>
